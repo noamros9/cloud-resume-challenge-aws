@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Modern Professional Resume</title>
+    <style>
+        :root {
+            --dark-bg: #121212;
+            --light-card: #F4F4F7;
+            --accent-color: #3498db;
+            --text-primary: #2c3e50;
+            --text-secondary: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, rgba(18, 18, 18, 0.9), rgba(36, 36, 36, 0.9)),
+                url('https://source.unsplash.com/1600x900/?abstract,dark');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: var(--light-card);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--accent-color), #2980b9);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .logo-inner {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotate 10s infinite linear;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            border-radius: 50%;
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.2),
+                inset 0 0 20px rgba(255,255,255,0.2);
+        }
+
+        .logo-inner::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateX(90deg);
+            width: 80%;
+            height: 80%;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            filter: blur(20px);
+        }
+
+        @keyframes rotate {
+            from { transform: rotateY(0deg) rotateX(10deg); }
+            to { transform: rotateY(360deg) rotateX(10deg); }
+        }
+
+        .section {
+            padding: 25px;
+        }
+
+        .section-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 { 
+            font-size: 2.5em; 
+        }
+
+        h2 { 
+            color: var(--accent-color); 
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header Section -->
+        <div class="header">
+            
+           <!-- Custom Logo -->
+           <div class="logo">
+               <div class="logo-inner"></div>
+           </div>
+
+           <!-- Name and Title -->
+           <h1>John Doe</h1>
+           <p>Senior Software Engineer | Full Stack Developer</p>
+       </div>
+
+       <!-- Professional Summary Section -->
+       <section class="section">
+           <h2>Professional Summary</h2>
+           <div class="section-card">
+               Innovative software engineer with expertise in modern web technologies and cloud solutions.
+           </div>
+       </section>
+
+       <!-- Experience Section -->
+       <section class="section">
+           <h2>Experience</h2>
+           <div class="section-card">
+               <h3>Senior Software Engineer</h3>
+               <p>Tech Innovations Inc. | Jan 2020 - Present</p>
+               <ul>
+                   <li>Developed scalable web applications using React and Node.js.</li>
+                   <li>Implemented microservices architecture to improve system performance.</li>
+                   <li>Led a team of developers to deliver projects on time.</li>
+               </ul>
+           </div>
+       </section>
+
+       <!-- Skills Section -->
+       <section class="section">
+           <h2>Skills</h2>
+           <div class="section-card">
+               JavaScript • React • Node.js • Python • Docker • Kubernetes
+           </div>
+       </section>
+
+       <!-- Education Section -->
+       <section class="section">
+           <h2>Education</h2>
+           <div class="section-card">
+               Master in Computer Science<br/>
+               Stanford University | Graduated in May 2018
+           </div>
+       </section>
+
+   </div>
+</body>
+</html>
